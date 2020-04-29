@@ -17,6 +17,9 @@ services:
       - 8000:8000
     depends_on:
       - db
+    environment:
+      - SECRET_KEY=r!@c*@3mxad+610s2-trqmlsq_&fa&s8#6=__z=v6nk3$$+8btq
+      - DEBUG=1
 
 volumes:
   postgres_data:
