@@ -46,23 +46,10 @@ INSTALLED_APPS = [
     # Local
     'users.apps.UsersConfig', # new
     'pages.apps.PagesConfig', #new
+    'books.apps.BooksConfig', #new
 ]
 
-# django-allauth config
-# django-allauth config
-LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT = 'home' # new
 
-SITE_ID = 1 # new
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend', # new
-)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
-ACCOUNT_USERNAME_REQUIRED = False # new
-ACCOUNT_AUTHENTICATION_METHOD = 'email' # new
-ACCOUNT_EMAIL_REQUIRED = True # new
-ACCOUNT_UNIQUE_EMAIL = True # new
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
@@ -160,3 +147,26 @@ STATICFILES_FINDERS = [
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# django-allauth config
+# django-allauth config
+LOGIN_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT = 'home' # new
+
+SITE_ID = 1 # new
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend', # new
+)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
+ACCOUNT_USERNAME_REQUIRED = False # new
+ACCOUNT_AUTHENTICATION_METHOD = 'email' # new
+ACCOUNT_EMAIL_REQUIRED = True # new
+ACCOUNT_UNIQUE_EMAIL = True # new
