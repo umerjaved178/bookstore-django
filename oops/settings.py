@@ -56,6 +56,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False # new
 ACCOUNT_SESSION_REMEMBER = True
 
+
+
+#media settings
+MEDIA_URL = '/media/' # new
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
