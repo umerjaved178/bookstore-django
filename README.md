@@ -1,6 +1,9 @@
 # Bookstore Django Project
 Bookstore app that displays all books, having individual pages for each. I have used UUID URL approah.
 
+# Registration, Login, Logout
+I have used django allauth extension for securely authentication of our users
+
 ## Review App
 I have added the Review app so readers can leave reviews of their favorite app
 
